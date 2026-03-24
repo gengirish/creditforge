@@ -116,7 +116,7 @@ export default function AnalyticsPage() {
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
                 <Pie data={decisionPie} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={90}
-                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}>
+                  label={false}>
                   {decisionPie.map((entry, i) => (
                     <Cell key={i} fill={DECISION_COLORS[entry.name] || "#6b7280"} />
                   ))}
